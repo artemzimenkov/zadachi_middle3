@@ -34,8 +34,12 @@ while(number > 0){
         max2 = chislo;
     }
 }
-return max2;
+if (max1 == max2)
+    return -1;
+else
+    return max2;
 }
+
 
 long long itc_bin_num(long long number) {
     if (number == 0) {
