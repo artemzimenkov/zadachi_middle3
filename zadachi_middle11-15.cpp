@@ -21,12 +21,14 @@ return max2;
 }
 
 int itc_second_simple_max_num(long long number) {
+if (number < 0)
+    number *= -1;
 int max1 = -1;
 int max2 = -1;
 while(number > 0){
     int chislo = number % 10;
     number /= 10;
-    if (chislo > max1){
+    if (chislo >= max1){
         max2 = max1;
         max1 = chislo;
     }
